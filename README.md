@@ -21,7 +21,7 @@ Let's consider all subarray of size 2 in the given array, the subarrays are [0:1
  
 Now for subarray [0:1] -> [2, -4], the first negative element is present at index 2(1 based indexing), [1:2] -> [-4, 3], the first negative element is present at index 2 of the array and similarly for all the remaining subarrays.  
 ## Test Case Generator 
-``` 
+``` C++
 #include <bits/stdc++.h>      
 using namespace std;  
   
@@ -47,6 +47,14 @@ vector<int> vect(n);
   }  
   return 0 ;}
   ```
+  ## Sample Test Cases (not included larger one )
+Input  
+10 3
+27871 -49102 -45652 -77392 35862 -65991 -40869 73305 58235 4303
+Output  
+2 2 3 4 6 6 7 -1  
+Input  
+
 ##  Editorial :
 First we will store all the negative indices of array **a** in vector **v**. After every element we print we would increase our count by 1. We will
 check whether our negative element lies in range of  starting index of subarray and end index of subarray  
@@ -55,7 +63,7 @@ also store the index of vector v
 If not  we will update starting index of subarray and end index of subarray and also print **-1** since wwe did not find any negative element  when our **v** index reaches its limit and we will check for the index +1 that our starting and ending index lies int the range or not and repeat the same processes again
 
   ## Solution 
-  ```
+  ``` C++
   #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
