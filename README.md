@@ -1,9 +1,9 @@
-# Codeforces Rating
+# Joining Task
                                                                     time limit per test 1 second
                                                                     memory limit per test256 megabytes
                                                                     input standard input
                                                                     output standard output
-Vaibhav was crying in the corner of his room because his rating had dropped again. He notes down his rating changes on Codeforces after every contest. He wants to find out the index of the first rating drop in the array of rating changes for every subarray of size k. He needs your help to do so because his eyes are all watery with tears.  
+Alice the student of IIT Kanpur is highly interested in Coding and Development for that he want to join Programming Club of IIT Kanpur. As Programming Club is highly demanded and elite club so everyone want to join it. So Programming Club gave the task and for relaxation they allowed a pair of student to work on the task. So the task goes as: Everyone has been assigned a dataset of competitive programmers that includes the number of contest(n) given by him and an array which contains change in rating after each round and also each one of them wants to find out the index of the first rating drop in the array of rating changes for every subarray of size k . After trying the problem Alice did not get the logic of the problem so as a partner of alice you need to help him. Can you help him ??  
 **Input**  
 The first line of the test case consists of two integers n,k(1<k<n<1e5).-> number of elements in array and size of subarray.  
 The second line consists of n integers seperated by a space.  
@@ -54,13 +54,18 @@ Input
 Output  
 2 2 3 4 6 6 7 -1  
 Input  
+100 31
+-61621 80968 99477 -76460 -94380 32401 11779 -3107 -37934 -39396 40131 -99641 -89189 24883 -24708 -88815 -44336 -26040 59212 -73621 -15072 55094 9771 -75517 72593 -96111 56374 -63329 -36629 -55386 -14991 -20580 25440 64756 38883 -19136 22430 -5584 95373 -73506 -66382 12393 -49750 -64219 82970 -93474 62460 -38750 -44065 27270 41494 -91431 -91052 -50149 30713 -34075 -79145 29297 47592 -99977 -34144 9203 37023 -93514 62047 -20094 86081 -50785 -89840 -26270 -57697 98470 95398 -23838 -94583 29238 -81023 84927 36868 -95564 5446 -46612 62950 21963 75617 40815 -62482 -74914 -66328 -11175 -80481 -32956 36248 -47192 -84276 -58137 64286 96457 -16361 -31924
+Output  
+1 4 4 4 5 8 8 8 9 10 12 12 13 15 15 16 17 18 20 20 21 24 24 24 26 26 28 28 29 30 31 32 36 36 36 36 38 38 40 40 41 43 43 44 46 46 48 48 49 52 52 52 53 54 56 56 57 60 60 60 61 64 64 64 66 66 68 68 69 70
 
 ##  Editorial :
 First we will store all the negative indices of array **a** in vector **v**. After every element we print we would increase our count by 1. We will
 check whether our negative element lies in range of  starting index of subarray and end index of subarray  
 If it lies in range of starting index we would print the index of negative element +1 and update starting and last element of index and
 also store the index of vector v 
-If not  we will update starting index of subarray and end index of subarray and also print **-1** since wwe did not find any negative element  when our **v** index reaches its limit and we will check for the index +1 that our starting and ending index lies int the range or not and repeat the same processes again
+If not  we will update starting index of subarray and end index of subarray and also print **-1** since wwe did not find any negative element  when our **v** index reaches its limit and we will check for the index +1 that our starting and ending index lies int the range or not and repeat the same processes again. Time complexity
+is min **(O(n.k) ,O(n.size of vector))**
 
   ## Solution 
   ``` C++
